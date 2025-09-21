@@ -9,7 +9,9 @@
     "astro": "astro",
     "lint": "eslint . --ext .js,.mjs,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.mjs,.ts,.tsx --fix",
-    "format": "prettier --write '**/*.{astro,ts,tsx,js,mjs,jsx,md,json}' && npm run lint:fix"
+    "format": "prettier --write '**/*.{astro,ts,tsx,js,mjs,jsx}' && npm run lint:fix && prettier --write '**/*.{astro,ts,tsx,js,mjs,jsx}'",
+    "e2e": "npx playwright test",
+    "report": "npx playwright show-report"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.1",
@@ -22,6 +24,8 @@
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.5.2",
     "@typescript-eslint/parser": "^8.43.0",
     "astro-eslint-parser": "^1.2.2",
     "eslint": "^9.35.0",
